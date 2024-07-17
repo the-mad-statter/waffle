@@ -5,7 +5,7 @@ picto_scale <- function(aesthetic, values = NULL, ...) {
   pal <- function(n) {
     vapply(
       if (n > length(values)) rep(values[[1]], n) else values,
-      function(.x) .fa_unicode[.fa_unicode[["name"]] == .x, "unicode"],
+      function(.x) .x, #.fa_unicode[.fa_unicode[["name"]] == .x, "unicode"],
       character(1),
       USE.NAMES = FALSE
     )
